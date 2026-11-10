@@ -1,6 +1,6 @@
 {
-  "name": "dsh-farm",
-  "version": "0.5.0",
+  "name": "dsh-zen-garden",
+  "version": "0.6.0",
   "description": "摸鱼花园：在 DeepSeek Harness 侧边栏养像素植物、看实时天气、浇水、收金币，让大肥鱼帮忙照看。",
   "type": "module",
   "icon": "icon.svg",
@@ -58,10 +58,10 @@
   "author": "vector985",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vector985/dsh-farm.git"
+    "url": "git+https://github.com/vector985/dsh-zen-garden.git"
   },
-  "homepage": "https://github.com/vector985/dsh-farm#readme",
+  "homepage": "https://github.com/vector985/dsh-zen-garden#readme",
   "bugs": {
-    "url": "https://github.com/vector985/dsh-farm/issues"
+    "url": "https://github.com/vector985/dsh-zen-garden/issues"
   }
 }

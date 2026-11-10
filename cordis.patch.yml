@@ -1,5 +1,5 @@
 # 单包插件：这一行加载 lib/index.js（Host 半）；
 # package.json 的 dsh.client 让 Web 端加载 ./client（浏览器半）。
 - insert:
-    - id: dsh-farm
-      name: dsh-farm
+    - id: dsh-zen-garden
+      name: dsh-zen-garden

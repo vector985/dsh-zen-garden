@@ -1,4 +1,4 @@
-# 大肥鱼植物园 · dsh-farm
+# 大肥鱼植物园 · dsh-zen-garden
 
 [English](README.en.md)
 
@@ -65,8 +65,8 @@
 
 | 工具 | 作用 |
 | --- | --- |
-| `farm_status` | 查看金币、等级、花盆里的植物、开花进度、水分、待收金币、种子、每日任务和托管日志 |
-| `farm_action` | 执行 `plant` / `water` / `waterAll` / `collect` / `collectAll` / `buySeed` / `sellPlant` / `gift` / `setSnail` / `claimQuest` |
+| `garden_status` | 查看金币、等级、花盆里的植物、开花进度、水分、待收金币、种子、每日任务和托管日志 |
+| `garden_action` | 执行 `plant` / `water` / `waterAll` / `collect` / `collectAll` / `buySeed` / `sellPlant` / `gift` / `setSnail` / `claimQuest` |
 
 例子：
 
@@ -81,15 +81,15 @@
 ### 方式一：从 GitHub 安装
 
 ```sh
-dsh plugin --profile desktop add github:vector985/dsh-farm
+dsh plugin --profile desktop add github:vector985/dsh-zen-garden
 ```
 
-或在插件管理器里选择 **GitHub**，填入 `vector985/dsh-farm`。
+或在插件管理器里选择 **GitHub**，填入 `vector985/dsh-zen-garden`。
 
 ### 方式二：从 Release 安装
 
 ```sh
-dsh plugin --profile desktop add https://github.com/vector985/dsh-farm/releases/latest/download/dsh-farm.tgz
+dsh plugin --profile desktop add https://github.com/vector985/dsh-zen-garden/releases/latest/download/dsh-zen-garden.tgz
 ```
 
 ### 方式三：插件管理器本地路径（开发用）
@@ -99,7 +99,7 @@ dsh plugin --profile desktop add https://github.com/vector985/dsh-farm/releases/
 1. 打开 Harness 左侧栏的 **插件**。
 2. 点 **添加插件**，选择 **本地绝对路径**，填入本目录（在仓库根目录执行 `pwd` 得到）：
    ```
-   /path/to/dsh-farm
+   /path/to/dsh-zen-garden
    ```
 3. 安装后点 **启用**，刷新页面。侧边栏会出现「摸鱼花园」。
 
@@ -108,8 +108,8 @@ dsh plugin --profile desktop add https://github.com/vector985/dsh-farm/releases/
 把本目录链接进 profile，并在 `~/.dsh/profiles/desktop/cordis.patch.yml` 末尾加：
 
 ```yaml
-- id: dsh-farm
-  name: dsh-farm
+- id: dsh-zen-garden
+  name: dsh-zen-garden
 ```
 
 然后：
@@ -124,21 +124,21 @@ pnpm install
 ### 方式五：从 tarball 安装
 
 ```sh
-cd /path/to/dsh-farm
+cd /path/to/dsh-zen-garden
 npm pack
 ```
 
-在插件管理器里选择 **tarball**，装生成的 `dsh-farm-0.5.0.tgz`。
+在插件管理器里选择 **tarball**，装生成的 `dsh-zen-garden-0.6.0.tgz`。
 
 ## 存档
 
 默认存在本机 JSON：
 
-- `~/.dsh/farm/state.json`
-- 设置了 `DSH_HOME`：`$DSH_HOME/farm/state.json`
+- `~/.dsh/zen-garden/state.json`
+- 设置了 `DSH_HOME`：`$DSH_HOME/zen-garden/state.json`
 - 想整体换目录：设置 `DSH_FARM_DIR` 后重启 Harness。
 
-存档是本机单机数据；删掉就会重新开局。旧版菜地存档（v1）会自动换成植物园初始状态。
+存档是本机单机数据；删掉就会重新开局。旧版菜地存档（v1）会自动换成植物园初始状态；旧的 `~/.dsh/farm/state.json` 会在首次启动时迁移一次。
 
 ## 开发
 

@@ -1,4 +1,4 @@
-# dsh-farm · Pixel Zen Garden
+# dsh-zen-garden · Pixel Zen Garden
 
 A desktop-side garden for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). Open **Plugins → 摸鱼花园** (the sidebar entry) and grow pixel plants while the agent works. The more new tokens the agent processes, the faster the flowers grow.
 
@@ -12,35 +12,35 @@ A desktop-side garden for [DeepSeek Harness](https://github.com/deepseek-ai/deep
 - **Zen-garden loop** — plant, water, wait for the bloom, collect coins, sell a plant, buy more seeds. Daily tasks pay extra coins.
 - **Live weather** — reads the current conditions from [Open-Meteo](https://open-meteo.com/) for your local timezone's city. Rain speeds growth and keeps the soil wet; snow slows it down. Switch the city from the weather bar.
 - **Big Fat Fish helper** — a local NPC that collects ripe coins and waters the thirstiest plant while you are away.
-- **Agent tools** — `farm_status` reports the garden; `farm_action` lets the agent plant, water, collect, buy, sell and claim tasks. The farm keeps growing offline because growth is based on timestamps in a local JSON save.
+- **Agent tools** — `garden_status` reports the garden; `garden_action` lets the agent plant, water, collect, buy, sell and claim tasks. The farm keeps growing offline because growth is based on timestamps in a local JSON save.
 - **Pixel UI** — hand-drawn SVG-pixel plants, pots, coins, weather and a dark wood HUD. No image assets or external UI library at runtime.
 
 ## Install
 
 ### From the DSH plugin manager
 
-Install `dsh-farm` from the plugin market, or add this repository / a release tarball through the manager.
+Install `dsh-zen-garden` from the plugin market, or add this repository / a release tarball through the manager.
 
 ### From this repository
 
 ```sh
-dsh plugin --profile desktop add github:vector985/dsh-farm
+dsh plugin --profile desktop add github:vector985/dsh-zen-garden
 ```
 
 Or install the prebuilt release tarball:
 
 ```sh
-dsh plugin --profile desktop add https://github.com/vector985/dsh-farm/releases/latest/download/dsh-farm.tgz
+dsh plugin --profile desktop add https://github.com/vector985/dsh-zen-garden/releases/latest/download/dsh-zen-garden.tgz
 ```
 
-Then enable **dsh-farm** and refresh the page. The sidebar entry is called **摸鱼花园**.
+Then enable **dsh-zen-garden** and refresh the page. The sidebar entry is called **摸鱼花园**.
 
 ### From a tarball
 
-Download `dsh-farm.tgz` from the latest release and choose it in the plugin manager, or:
+Download `dsh-zen-garden.tgz` from the latest release and choose it in the plugin manager, or:
 
 ```sh
-dsh plugin --profile desktop add /path/to/dsh-farm.tgz
+dsh plugin --profile desktop add /path/to/dsh-zen-garden.tgz
 ```
 
 ## Using it
@@ -67,7 +67,7 @@ Without an override, the plugin maps the host timezone to a city (for example `A
 
 ## Data and privacy
 
-- Save file: `~/.dsh/farm/state.json` (`$DSH_HOME/farm/state.json` when `DSH_HOME` is set; `DSH_FARM_DIR` overrides the directory).
+- Save file: `~/.dsh/zen-garden/state.json` (`$DSH_HOME/zen-garden/state.json` when `DSH_HOME` is set; `DSH_FARM_DIR` overrides the directory; the old `farm/state.json` is migrated once).
 - Weather requests send only the city coordinates to Open-Meteo — no session content, tokens, account or file paths.
 - The plugin has no telemetry, no remote save and no account system. Deleting the JSON file starts a new garden.
 - The token meter reads the host's own `tokenUsage` projection; it does not read prompts or message bodies.

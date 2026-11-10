@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'dsh-farm-test-'));
+const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'dsh-zen-garden-test-'));
 process.env.DSH_FARM_DIR = dir;
 const {
 	internals,
@@ -28,7 +28,7 @@ const {
 } = internals;
 
 function request(method, body) {
-	return new Request('http://farm.test/api/dsh-farm/state', {
+	return new Request('http://farm.test/api/dsh-zen-garden/state', {
 		method,
 		headers: body ? { 'content-type': 'application/json' } : undefined,
 		body: body ? JSON.stringify(body) : undefined,
@@ -181,7 +181,7 @@ const toolCtx = {
 };
 apply(toolCtx);
 assert.equal(registered.length, 2);
-assert.deepEqual(registered.map(tool => tool.name), ['farm_status', 'farm_action']);
+assert.deepEqual(registered.map(tool => tool.name), ['garden_status', 'garden_action']);
 
 const status = await registered[0].execute({}, {});
 assert.match(status, /硬币/);
@@ -322,5 +322,5 @@ assert.equal(offline.temp, 18);
 assert.equal(offline.city, '上海');
 assert.equal(offline.ok, false);
 
-console.log('dsh-farm tests: 44 checks passed');
+console.log('dsh-zen-garden tests: 44 checks passed');
 fs.rmSync(dir, { recursive: true, force: true });
