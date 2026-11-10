@@ -1,0 +1,67 @@
+{
+  "name": "dsh-farm",
+  "version": "0.5.0",
+  "description": "摸鱼花园：在 DeepSeek Harness 侧边栏养像素植物、看实时天气、浇水、收金币，让大肥鱼帮忙照看。",
+  "type": "module",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "docs/farm-desktop.png",
+    "docs/farm-mobile.png",
+    "screenshots.json",
+    "assets/icon-180.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "manifestVersion": 1
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "garden",
+    "pixel",
+    "摸鱼"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1",
+    "node": ">=22.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js",
+    "test": "node test/game.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.2.2-rc.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.1"
+  },
+  "author": "vector985",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vector985/dsh-farm.git"
+  },
+  "homepage": "https://github.com/vector985/dsh-farm#readme",
+  "bugs": {
+    "url": "https://github.com/vector985/dsh-farm/issues"
+  }
+}
